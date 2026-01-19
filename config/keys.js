@@ -5,14 +5,11 @@ let credentials;
 
 if (process.env.NODE_ENV === 'production') {
   // we are in production - return the prod set of keys
-  credentials = {
-    prodKeys
-  };
+  credentials =  prodKeys;
 } else {
   // we are in development - return the dev keys!!!
   const devKeys = (await import('./dev.js')).default;
-  credentials = 
-    devKeys
+  credentials = devKeys
   };
 
 
