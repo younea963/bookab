@@ -1,7 +1,7 @@
 import passport from 'passport';
 import GoogleStrategy from 'passport-google-oauth20';
 import mongoose from 'mongoose';
-import keys from '../config/keys.js';
+import keys from '../config/keys.js'; 
 
 
 
@@ -24,7 +24,8 @@ passport.deserializeUser((id, done) => { //doing the opposite of serializeUser: 
 passport.use(new GoogleStrategy.Strategy({
     clientID: keys.GOOGLE_CLIENT_ID,
     clientSecret: keys.GOOGLE_CLIENT_SECRET,
-    callbackURL: '/auth/google/callback'
+    callbackURL: '/auth/google/callback',
+    proxy: true // to handle heroku proxy issues
   },
   (accessToken, refreshToken, profile, done) => {
     User.findOne({ googleId: profile.id }).then((existingUser) => { // anytime we reach out to the database, it RETURNS an ASYNC PROMISE so we use .then. We will CALL the model instance "existingUser". If there's no existing user, then the "existingUser" will be NULL. To figure out whether it exists, need an IF stmt

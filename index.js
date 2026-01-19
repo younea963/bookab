@@ -4,7 +4,8 @@ import cookieSession from 'cookie-session';
 import passport from 'passport';
 import './models/user.js';
 import './services/passport.js';
-// import keys from './config/keys.js';
+import keys from './config/keys.js';
+
 
 import authRoutes from './routes/authRoutes.js';
 
@@ -27,7 +28,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-const PORT = process.env.PORT || 3000;
+
 
 authRoutes(app);
 
@@ -38,6 +39,7 @@ authRoutes(app);
 // Sample route
 
 // Start server
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
