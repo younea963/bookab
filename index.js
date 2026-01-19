@@ -4,7 +4,7 @@ import cookieSession from 'cookie-session';
 import passport from 'passport';
 import './models/user.js';
 import './services/passport.js';
-import keys from './config/keys.js';
+// import keys from './config/keys.js';
 
 import authRoutes from './routes/authRoutes.js';
 
