@@ -1,17 +1,9 @@
 import keys from '../config/keys.js';
 import Stripe from 'stripe';
 import requireLogin from '../middlewares/requireLogin.js';
-import pg from 'pg';
+import pgPool from "../services/pgPool.js";
 
-const { Pool } = pg;
 
-const pgPool = new Pool({
-  user: keys.pgUser,
-  host: keys.pgHost,
-  database: keys.pgDatabase,
-  password: keys.pgPassword,
-  port: keys.pgPort,
-});
 
  
 

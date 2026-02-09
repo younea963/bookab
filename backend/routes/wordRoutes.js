@@ -1,7 +1,8 @@
 // get route route for submitting new words
-import pg from 'pg';
+import pgPool from "../services/pgPool.js";
+
 import axios from 'axios';
-const { Pool } = pg;
+
 import keys from '../config/keys.js';
 import requireLogin from '../middlewares/requireLogin.js';
 import requireCredits from '../middlewares/requireCredits.js';
@@ -9,13 +10,7 @@ import requireCredits from '../middlewares/requireCredits.js';
 import OpenAI from "openai";
 import similarity from 'compute-cosine-similarity';
 
-const pgPool = new Pool({
-  user: keys.pgUser,
-  host: keys.pgHost,
-  database: keys.pgDatabase,
-  password: keys.pgPassword,
-  port: keys.pgPort,
-});
+
 
 const opeanai = new OpenAI({
     apiKey: keys.openAPIKEY

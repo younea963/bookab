@@ -2,18 +2,8 @@ import passport from 'passport';
 import GoogleStrategy from 'passport-google-oauth20';
 import mongoose from 'mongoose';
 import keys from '../config/keys.js'; 
-import pg from 'pg';
-const { Pool } = pg;
+import pgPool from "../services/pgPool.js";
 
-const pgPool = new Pool({
-  user: keys.pgUser,
-  host: keys.pgHost,
-  database: keys.pgDatabase,
-  password: keys.pgPassword,
-  port: keys.pgPort,
-});
-
-pgPool.connect();
 
 // this is STEP 2 (AFTER user has been redirected back to our application from Google and has logged in successfully)
 passport.serializeUser((user, done) => { // PURPOSE of serializing: to turn the user record (that was found in the database) into an ID (to store in cookie) 
