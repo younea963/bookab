@@ -21,6 +21,9 @@ import { fileURLToPath } from "url";
 
 const app = express();
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 mongoose.connect(keys.mongoURI).then(() => {
   console.log('Connected to MongoDB');
 }).catch((err) => {
@@ -65,8 +68,7 @@ wordRoutes(app);
 // gameRoutes(app);
 
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+
 
 // Serve the React build folder
 app.use(express.static(path.join(__dirname, "../client/build")));
