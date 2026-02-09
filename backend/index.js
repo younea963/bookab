@@ -72,7 +72,7 @@ const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, "../client/build")));
 
 // For any route that isn't an API route, send back React
-app.get("*", (req, res) => {
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
 
