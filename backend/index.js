@@ -13,6 +13,10 @@ import passport from 'passport';
 import './services/passport.js';
 import keys from './config/keys.js';
 
+import path from "path";
+import { fileURLToPath } from "url";
+
+
 
 
 const app = express();
@@ -59,6 +63,19 @@ authRoutes(app);
 billingRoutes(app);
 wordRoutes(app);
 // gameRoutes(app);
+
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Serve the React build folder
+app.use(express.static(path.join(__dirname, "../client/build")));
+
+// For any route that isn't an API route, send back React
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+});
+
 
 
 // Middleware
