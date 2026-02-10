@@ -3,10 +3,6 @@ import passport from "passport";
 
 export default function authRoutes(app) {
 
-app.get('/', (req, res) => {
-  res.send('Welcome to Bookabulary API! Use /auth/google to log in.');
-});
-
 app.get('/auth/google', passport.authenticate('google', {
   scope: ['profile', 'email']
 }));
