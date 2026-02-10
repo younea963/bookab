@@ -38,15 +38,15 @@ const Landing = (props) => {
 
                 <ul className="collection">
                   <li className="collection-item">
-                    <i className="material-icons left">edit</i>
+                    <i className="material-icons left">1.</i>
                     Add a new word + the book title when you learn it.
                   </li>
                   <li className="collection-item">
-                    <i className="material-icons left">sports_esports</i>
+                    <i className="material-icons left">2.</i>
                     Take a quiz to test if you remember the meaning.
                   </li>
                   <li className="collection-item">
-                    <i className="material-icons left">auto_awesome</i>
+                    <i className="material-icons left">3.</i>
                     Repeat — your vocabulary grows fast.
                   </li>
                 </ul>
