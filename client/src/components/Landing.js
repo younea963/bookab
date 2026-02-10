@@ -23,21 +23,54 @@ const Landing = (props) => {
                 return; // do nothing, still deciding if logged in or not
             case false:
                 return (
-                    <div style={{ textAlign: 'center' }}>
-            <h1>
-                Welcome to Bookabulary!
-            </h1>
+                    <div className="container">
+      <div className="section">
+        <h3 className="center-align">Welcome to Bookabulary!</h3>
+        <p className="center-align grey-text text-darken-1">
+          Save new words from your reading, then quiz yourself to remember them.
+        </p>
 
-            <h4 >How does it work?</h4>
-          <p style={{ textAlign: "left" }}>1. Each time you read a book and learn a new, unfamiliar word, log it here! 
-            Input the new word along with the book title. </p>
-            <br></br>
-        <p style={{ textAlign: "left" }}>2. After that, test your knowledge through the quiz to see if you remember what the word means. </p>
-        <p style={{ textAlign: "left" }}>It's as simple as that.</p>
-        <h4>Eager to start? </h4> 
-        <p style={{ textAlign: "left" }}>Login with your Google Account now.</p>
+        <div className="row">
+          <div className="col s12 m10 offset-m1 l8 offset-l2">
+            <div className="card">
+              <div className="card-content">
+                <span className="card-title">How does it work?</span>
 
+                <ul className="collection">
+                  <li className="collection-item">
+                    <i className="material-icons left">edit</i>
+                    Add a new word + the book title when you learn it.
+                  </li>
+                  <li className="collection-item">
+                    <i className="material-icons left">sports_esports</i>
+                    Take a quiz to test if you remember the meaning.
+                  </li>
+                  <li className="collection-item">
+                    <i className="material-icons left">auto_awesome</i>
+                    Repeat — your vocabulary grows fast.
+                  </li>
+                </ul>
+
+                <div className="divider" style={{ margin: "18px 0" }} />
+
+                <h5 className="center-align" style={{ marginBottom: 6 }}>
+                  Eager to start?
+                </h5>
+                <p className="center-align grey-text">
+                  Login with your Google Account to save words and see your vocab list.
+                </p>
+              </div>
+
+              <div className="card-action center-align">
+                <a className="btn-large blue lighten-1" href="/auth/google">
+                  Login with Google
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
                 );
             default:
                 return (
