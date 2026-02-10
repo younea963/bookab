@@ -8,7 +8,7 @@ import {connect} from 'react-redux';
 import * as actions from '../actions'; // import all action creators from actions index.js file
 // components
 import Header from './Header';
-import Landing from './Login';
+import Landing from '.Landing/';
 import { useEffect } from 'react';
 import Dashboard from './Dashboard';
 import WordNew from './WordNew';
