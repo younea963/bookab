@@ -29,13 +29,13 @@ const Landing = (props) => {
             </h1>
 
             <h4 >How does it work?</h4>
-          <p style="text-align: left;"> 1. Each time you read a book and learn a new, unfamiliar word, log it here! 
+          <p style={{ textAlign: "left" }}>1. Each time you read a book and learn a new, unfamiliar word, log it here! 
             Input the new word along with the book title. </p>
             <br></br>
-        <p style="text-align: left;">2. After that, test your knowledge through the quiz to see if you remember what the word means. </p>
-        <p style="text-align: left;">It's as simple as that.</p>
+        <p style={{ textAlign: "left" }}>2. After that, test your knowledge through the quiz to see if you remember what the word means. </p>
+        <p style={{ textAlign: "left" }}>It's as simple as that.</p>
         <h4>Eager to start? </h4> 
-        <p style="text-align: left;">Login with your Google Account now.</p>
+        <p style={{ textAlign: "left" }}>Login with your Google Account now.</p>
 
       </div>
                 );
@@ -58,6 +58,7 @@ const Landing = (props) => {
                 )
         }
     }
+    return <div>{renderContent()}</div>;
 };
 
 
