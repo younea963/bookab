@@ -55,7 +55,7 @@ const Summary = ({userAnswers, words, difficulty}) =>{
           }
     
           const home = () =>{
-            navigate('/home')
+            navigate('/')
           }
     
     if (status === "loading") return <p>Loading…</p>;

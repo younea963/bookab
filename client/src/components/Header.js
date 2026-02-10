@@ -36,7 +36,7 @@ const Header = (props) => {
       <nav>
         <div className="nav-wrapper">
           <Link 
-          to={props.auth ? "/home" : "/"} 
+          to={props.auth ? "/" : "/"} 
           className="brand-logo left" style={{ marginLeft: "10px" }}>
             Bookabulary
           </Link>

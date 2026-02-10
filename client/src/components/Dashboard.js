@@ -16,7 +16,7 @@ const Dashboard = () => {
 
   return (
     <div>
-      <h1>My (book)abulary</h1>
+      <h1>My Bookabulary</h1>
       <WordList />
       <br />
 
