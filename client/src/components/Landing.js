@@ -10,7 +10,7 @@ const Landing = (props) => {
       }
 
       const vocab = () =>{
-        navigate('/word/list')
+        navigate('/words')
       }
 
       const game = () =>{
