@@ -151,8 +151,6 @@ const Summary = ({userAnswers, words, difficulty}) =>{
                 Add Another Word</button>
             <button className = "waves-effect waves-light btn-large blue lighten-1"
             onClick={vocab}>Return to vocabulary</button>
-            <button className = "waves-effect waves-light btn-large blue lighten-1"
-            onClick={game}>Play Again</button>
             </div>   
         
 
