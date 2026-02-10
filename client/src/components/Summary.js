@@ -54,8 +54,8 @@ const Summary = ({userAnswers, words, difficulty}) =>{
             navigate('/words')
           }
     
-          const game = () =>{
-            navigate('/quiz')
+          const home = () =>{
+            navigate('/home')
           }
     
     if (status === "loading") return <p>Loading…</p>;
@@ -151,6 +151,8 @@ const Summary = ({userAnswers, words, difficulty}) =>{
                 Add Another Word</button>
             <button className = "waves-effect waves-light btn-large blue lighten-1"
             onClick={vocab}>Return to vocabulary</button>
+            <button className = "waves-effect waves-light btn-large blue lighten-1"
+            onClick={home}>Return to homepage</button>
             </div>   
         
 

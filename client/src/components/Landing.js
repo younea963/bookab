@@ -4,17 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 const Landing = () => {
     const navigate = useNavigate()
     
-      const newWord = () =>{
-        navigate("/words/new")
-      }
 
-      const vocab = () =>{
-        navigate('/words')
-      }
-
-      const game = () =>{
-        navigate('/quiz')
-      }
 
     return (
         <div style={{ textAlign: 'center' }}>
@@ -22,17 +12,26 @@ const Landing = () => {
                 Welcome to Bookabulary!
             </h1>
             <p>
-                Collect and share your favorite book quotes.
+                Collect and share your favourite book quotes.
             </p>
-            <div className = "quiz-container">
-            <button className = "waves-effect waves-light btn-large blue lighten-1"
-             onClick={newWord}>
-                Add Word</button>
-            <button className = "waves-effect waves-light btn-large blue lighten-1"
-            onClick={vocab}>My vocabulary</button>
-            <button className = "waves-effect waves-light btn-large blue lighten-1"
-            onClick={game}>Play Quiz</button>
-            </div>
+          <div class="col s12 m7">
+    <h2 class="header">Horizontal Card</h2>
+    <div class="card horizontal">
+      <div class="card-image">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+            <h3>How does it work?</h3>
+          <p>Each time you read a book and learn a new, unfamiliar word, log it here! 
+            Input the new word along with the book title. </p>
+        <p>After that, test your knowledge through the quiz to see if you remember what the word means. </p>
+        <p>It's as simple as that.</p>
+        <h3>Eager to start? Login with your Google Account now.</h3>
+        </div>
+
+      </div>
+    </div>
+  </div>
         </div>
     );
 };

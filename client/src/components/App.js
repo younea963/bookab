@@ -35,6 +35,7 @@ useEffect(() => { // useEffect hook to fetch user data when the component mounts
           <Header />
           <Routes>
             <Route path="/" element={<Landing />} />
+            <Route path="/home" element={<Landing />} />
             <Route path="/words/new" element={<WordNew />} />
             <Route path="/words" element={<Dashboard />} />
             <Route path="/quiz" element={<Quiz />} />
