@@ -71,7 +71,7 @@ app.get('/api/ran', async (req, res) => {
 // post function
 async function getSynonymsThesaurus(unknown_word) {
   try {
-    const response = await axios.get(`https://www.dictionaryapi.com/api/v3/references/thesaurus/json/${unknown_word}?key=${keys.api_key_thesauraus}`);
+    const response = await axios.get(`https://www.dictionaryapi.com/api/v3/references/thesaurus/json/${unknown_word}?key=${keys.apiKeyThesauraus}`);
     const type_word = response.data[0].meta.fl
     console.log('heres the thesauraus', response)
     console.log('synonyms are here', response.data[0].meta.syns[0])
@@ -184,8 +184,7 @@ async function getSynonymsThesaurus(unknown_word) {
       );
 
     return res.status(201).send({
-      newWord: updated_word.rows[0],
-      user: updated_user.rows[0]
+      newWord: updated_word.rows[0]
     }); // send back updated user with reduced credits in the header
     
     } catch (error) {
